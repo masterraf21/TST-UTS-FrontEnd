@@ -4,8 +4,7 @@ class Home extends Component {
   render () {
     return (
       <div>
-        <h2>Homif</h2>
-        <p>Yuhu</p>
+        <h3>Definitely not a copy of Draft UB</h3>
       </div>
     )
   }

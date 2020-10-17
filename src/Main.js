@@ -1,23 +1,34 @@
 import React, { Component } from 'react'
+import { Route, NavLink, HashRouter } from 'react-router-dom'
+import Home from './Home'
+import Tambah from './Tambah'
+import Ambil from './Ambil'
 
 class Main extends Component {
   render () {
     return (
-      <div>
-        <h1>Notes for You</h1>
-        <ul className='Header'>
-          <li>
-            <a href='/'>Home</a>
-          </li>
-          <li>
-            <a href='/tambah'>Kirim Pesan</a>
-          </li>
-          <li>
-            <a href='/ambil'>Lihat Pesan</a>
-          </li>
-        </ul>
-        <div className='content'></div>
-      </div>
+      <HashRouter>
+        <div>
+          <h1>Notes for You</h1>
+          <h2>Mari bertukar pesan disini</h2>
+          <ul className='header'>
+            <li>
+              <NavLink to='/'>Home</NavLink>
+            </li>
+            <li>
+              <NavLink to='/tambah'>Tambah Pesan</NavLink>
+            </li>
+            <li>
+              <NavLink to='/ambil'>Tampilkan Pesan</NavLink>
+            </li>
+          </ul>
+          <div className='content'>
+            <Route exact path='/' component={Home} />
+            <Route path='/tambah' component={Tambah} />
+            <Route path='/ambil' component={Ambil} />
+          </div>
+        </div>
+      </HashRouter>
     )
   }
 }

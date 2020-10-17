@@ -4,8 +4,7 @@ class Ambil extends Component {
   render () {
     return (
       <div>
-        <h2>Ambil</h2>
-        <p>Ambil semua gan</p>
+        <h3>Pesan-pesan diantara kita</h3>
       </div>
     )
   }
