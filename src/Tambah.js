@@ -4,7 +4,7 @@ class Tambah extends Component {
   render () {
     return (
       <div>
-        <h3>Tambahkan pesan anda disini</h3>
+        <h3 className='main'>Tambahkan pesan anda disini</h3>
         <PesanForm />
       </div>
     )

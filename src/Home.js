@@ -4,7 +4,7 @@ class Home extends Component {
   render () {
     return (
       <div>
-        <h3>Definitely not a copy of Draft UB</h3>
+        <h3 class='main'>Definitely not a copy of Draft UB</h3>
       </div>
     )
   }

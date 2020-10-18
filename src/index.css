@@ -2,10 +2,11 @@ body {
     background-color: #FFB6C1;
     padding: 20px;
     margin: 0;
+    text-align: center;
   }
   h1, h2, ul, li {
     font-family: sans-serif;
-    color: #F0FFFF;
+    color: #FFFAF0;
   }
 
   h1, h2{
@@ -22,14 +23,23 @@ body {
     padding: 0;
   }
   ul.header li a {
-    color: #FFF;
+    color: #FFFAF0;;
     font-weight: bold;
     text-decoration: none;
     padding: 20px;
     display: inline-block;
   }
+  .atas{
+    font-size: x-large;
+      }
+  
+  .main{
+    font-size: xx-large;
+    padding-top: 0vh;
+    padding-bottom: 10px;
+  }
   .content {
-    background-color: #FFF;
+    background-color: #FFFAF0;;
     padding: 20px;
   }
   .content h2 {

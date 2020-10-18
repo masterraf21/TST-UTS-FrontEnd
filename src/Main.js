@@ -9,8 +9,11 @@ class Main extends Component {
     return (
       <HashRouter>
         <div>
-          <h1>Notes for You</h1>
-          <h2>Mari bertukar pesan disini</h2>
+          <div className='atas'>
+            <h1>Notes for You</h1>
+            <h2>Mari bertukar pesan disini</h2>
+          </div>
+
           <ul className='header'>
             <li>
               <NavLink to='/'>Home</NavLink>

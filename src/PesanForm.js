@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import 'mdbreact/dist/css/mdb.css'
+
+import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBIcon } from 'mdbreact'
+
 const API_URL = 'https://tstbackend.azurewebsites.net/api/AddPesan'
 const API_KEY = 'tuDVNfpDBMzqbQR8mOZlsCm9SejhVYsivMiQZORlcDcATEPtvIbVPg=='
 
@@ -13,10 +17,6 @@ class PesanForm extends Component {
     }
     this.handleSubmit = this.handleSubmit.bind(this)
   }
-
-  // onChange (e) {
-  //   this.setState({ [e.target.name]: e.target.value })
-  // }
 
   senderHandler (e) {
     this.setState({
@@ -62,38 +62,65 @@ class PesanForm extends Component {
 
   render () {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Sender:
-            <input
-              type='text'
-              name='sender'
-              defaultValue={this.state.sender}
-              onChange={e => this.senderHandler(e)}
-            />
-          </label>
-          <label>
-            Receiver:
-            <input
-              type='text'
-              name='receiver'
-              defaultValue={this.state.receiver}
-              onChange={e => this.receiverHandler(e)}
-            />
-          </label>
-          <label>
-            Pesan:
-            <input
-              type='text'
-              name='message'
-              defaultValue={this.state.message}
-              onChange={e => this.messageHandler(e)}
-            />
-          </label>
-          <button type='submit'>Kirim Pesan</button>
-        </form>
-      </div>
+      <MDBContainer>
+        <MDBRow>
+          <MDBCol md='6'>
+            <form onSubmit={this.handleSubmit}>
+              <label htmlFor='defaultFormContactNameEx' className='grey-text'>
+                Sender
+              </label>
+              <br />
+              <input
+                type='text'
+                id='defaultFormContactNameEx'
+                className='form-control'
+                name='sender'
+                defaultValue={this.state.sender}
+                onChange={e => this.senderHandler(e)}
+              />
+              <br />
+              <label
+                htmlFor='defaultFormContactSubjectEx'
+                className='grey-text'
+              >
+                Receiver
+              </label>
+              <br />
+              <input
+                type='text'
+                id='defaultFormContactSubjectEx'
+                className='form-control'
+                name='receiver'
+                defaultValue={this.state.receiver}
+                onChange={e => this.receiverHandler(e)}
+              />
+              <br />
+              <label
+                htmlFor='defaultFormContactMessageEx'
+                className='grey-text'
+              >
+                Your message
+              </label>
+              <br />
+              <textarea
+                type='text'
+                id='defaultFormContactMessageEx'
+                className='form-control'
+                rows='3'
+                name='message'
+                defaultValue={this.state.message}
+                onChange={e => this.messageHandler(e)}
+              />
+              <div className='text-center mt-4'>
+                <MDBBtn color='warning' outline type='submit'>
+                  Send
+                  <MDBIcon far icon='paper-plane' className='ml-2' />
+                </MDBBtn>
+              </div>
+            </form>
+          </MDBCol>
+        </MDBRow>
+      </MDBContainer>
     )
   }
 }
