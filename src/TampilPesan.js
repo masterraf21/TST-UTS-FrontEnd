@@ -40,8 +40,6 @@ class TampilPesan extends Component {
           this.setState({
             pesan: toAdd
           })
-          //   console.log(this.state.pesan)
-          //   console.log(this.state.loaded)
         }
       })
       .catch(err => {
